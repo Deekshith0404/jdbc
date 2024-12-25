@@ -1,8 +1,8 @@
-package com.xworks.supermarket.retriver;
+package com.xworks.supermarket.example4;
 
 import java.sql.*;
 
-public class Example2Retriver {
+public class FindByIdAndField {
     public static void main(String[] args) {
 
         Connection connection=null;
@@ -12,19 +12,17 @@ public class Example2Retriver {
             String url="jdbc:mysql://localhost:3306/branch";
             String username="root";
             String password="root";
-            connection=DriverManager.getConnection(url,username,password);
+            connection= DriverManager.getConnection(url,username,password);
             statement=connection.createStatement();
-            String query="select * from country_info";
+            String query="select * from laptop_details where laptop_id=5 or laptop_name='mac'";
             ResultSet resultSet=statement.executeQuery(query);
             while (resultSet.next()){
                 int id=resultSet.getInt(1);
                 String name=resultSet.getString(2);
-                String capital=resultSet.getString(3);
-                int population=resultSet.getInt(4);
-                String famous=resultSet.getString(5);
-                System.out.println("country id :"+id+"  country name :"+name+"  country capital :"+capital+"  population:"+population+"  famous for "+famous);
-
+                double cost=resultSet.getDouble(3);
+                System.out.println("Mobile_id :"+id+"  mobile_name:"+name+"  cost:"+cost);
             }
+
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println(e.getMessage());
         }

@@ -1,4 +1,4 @@
-package com.xworks.supermarket.runner;
+package com.xworks.supermarket.example4;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

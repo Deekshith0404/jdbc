@@ -1,4 +1,4 @@
-package com.xworks.supermarket.runner;
+package com.xworks.supermarket.example3;
 import java.sql.*;
 public class example3 {
     public static void main(String[] args) {

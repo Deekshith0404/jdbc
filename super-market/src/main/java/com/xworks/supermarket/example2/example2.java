@@ -1,4 +1,4 @@
-package com.xworks.supermarket.runner;
+package com.xworks.supermarket.example2;
 
 import java.sql.*;
 
